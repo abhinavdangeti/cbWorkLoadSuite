@@ -43,4 +43,4 @@ Setting test.properties:
     - expiration..........expiration time for the items set with an expiry time
     - add-count...........no. of items to be added extra
     - loop................boolean value - to loop the load infinitely or not
-    - check-flag..........boolean value - to store return value of a set to later verify the set success
+    - check-flag..........boolean value - store return value of a set to later verify the set success
