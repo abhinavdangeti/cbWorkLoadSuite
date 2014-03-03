@@ -1,4 +1,4 @@
-theJavaSuite
+couchSuite
 ============
 
 Distribution of write-operations, over the key set:
