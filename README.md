@@ -1,5 +1,5 @@
-couchSuite
-============
+cbWorkLoadSuite
+===============
 
 Distribution of write-operations, over the key set:
 
