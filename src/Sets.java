@@ -17,6 +17,9 @@ import com.couchbase.client.CouchbaseClient;
 public class Sets {
     public static void set_items (CouchbaseClient client, Variables V, String _prefix) throws JSONException {
         Random gen = new Random(987654321);
+        if (V.getSetRatio() == 0.0) {
+            return;
+        }
         int items_to_expire = (int)(V.getExpRatio() * V.getItemCount());
         List<OperationFuture<Boolean>> sets = new LinkedList<OperationFuture<Boolean>>();
         for (int i=0; i<(V.getItemCount() - items_to_expire); i++) {
