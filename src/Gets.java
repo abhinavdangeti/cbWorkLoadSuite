@@ -22,8 +22,7 @@ public class Gets {
                     break;
                 }
                 Object item = client.get(String.format("%s%d", _prefix, i));
-                if (item != null)
-                    count --;
+                count --;
             }
         }
     }
