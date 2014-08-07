@@ -15,7 +15,8 @@ import com.couchbase.client.CouchbaseClient;
  */
 
 public class Sets {
-    public static void set_items (CouchbaseClient client, Variables V, String _prefix) throws JSONException, InterruptedException {
+    public static void set_items (CouchbaseClient client, Variables V, String _prefix)
+                                                throws JSONException, InterruptedException {
         Random gen = new Random(987654321);
         if (V.getSetRatio() == 0.0) {
             return;

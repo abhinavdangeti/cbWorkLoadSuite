@@ -11,18 +11,21 @@ public class Gets {
         boolean checkFlag = true;
         int count;
         if (V.getSetRatio() == 0.0) {
-            count = V.getItemCount();
+            count = V.getItemCount() + V.getAddCount();
         } else {
-            count = (int)(((1.0 - V.getSetRatio()) * V.getItemCount()) / V.getSetRatio());
+            count = (int)(((1.0 - V.getSetRatio()) *
+                        (V.getItemCount() + V.getAddCount())) / V.getSetRatio());
         }
         while (checkFlag) {
-            for (int i=0; i<V.getItemCount(); i++) {
+            for (int i=0; i<(V.getItemCount() + V.getAddCount()); i++) {
                 if (count == 0) {
                     checkFlag = false;
                     break;
                 }
                 Object item = client.get(String.format("%s%d", _prefix, i));
-                count --;
+                if (item != null) {
+                    count --;
+                }
             }
         }
     }
