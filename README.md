@@ -17,7 +17,7 @@ of set items are set with an expiration time. After this, the first (del-ratio) 
 and the next (append-ratio) number of items get updated with the appends, and the overlapping (prepend-ratio)
 number of items get updated with prepends, and a new set of items are added, indicated by the add-count.
 
-- Current design: all operations on buckets - synchronous access
+- Current design: all operations on buckets - parallel access
 - Specify test cluster-ops information in test.properties
 - make compile : To compile the program
 - make run : To execute the program
